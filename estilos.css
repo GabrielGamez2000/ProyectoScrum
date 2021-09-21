@@ -11,22 +11,23 @@ and open the template in the editor.
 .container {
         display: grid;
         grid-template-columns: 0.4fr 1.3fr 1.3fr;
-        grid-template-rows: 0.5fr 1.2fr 1.2fr 0.5fr;
+        grid-template-rows: 0.3fr 1.3fr 1.3fr 0.5fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "Header Header Header"
+          "landing_navbar Header Header"
           "landing_navbar section section"
           "landing_navbar section section"
-          "landing_navbar footer footer";
+          "footer footer footer";
       }
 
       .Header { grid-area: Header; 
-                border: 1px black solid;
+                
+                background-color: #F7A516;
       }
 
       .section { grid-area: section; 
-                 border: 1px black solid;
+                 
       }
 
       .landing_navbar { 
@@ -38,20 +39,22 @@ and open the template in the editor.
             "nav_01"
             "Nav_02"; 
             grid-area: landing_navbar; 
+            background-color: #0053AB;
             text-align: center;
             
                         
       }
       .nav_01 { grid-area: nav_01; 
-                border: 1px black solid
+                
       }
       .Nav_02 { grid-area: Nav_02; 
-                border: 1px black solid
+                
       }
       
       
       .footer { grid-area: footer; 
-                border: 1px black solid;
+                
+                background-color: #0053AB;
       }
       .wrapper {
           height:20px; 
