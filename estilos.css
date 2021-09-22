@@ -43,7 +43,8 @@ and open the template in the editor.
             text-align: center;
             
                         
-      }
+     }
+     
       .nav_01 { grid-area: nav_01; 
                 
       }
