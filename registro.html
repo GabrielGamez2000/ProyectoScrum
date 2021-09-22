@@ -9,22 +9,30 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="css/estilos2.css">
     </head>
     <body>
-        <div>
-            <form id="form_registro_usuario">
-                <label for="in_usuario">Usuario</label>
-                <input type="text" id="in_usuario">
-                <br>
-                <label for="in_contrasena">Contraseña</label>
-                <input type="password" id="in_contrasena">
-                <br>
-                <button id="btn_enviar_registro">
-                    Enviar
-                </button>
-                <br>
-                <a id="link_regreso" href="index.html" target="_self"> Regresar </a>
+        <div class="Main_content">
+            <form action="" id="form_registro_usuario">
+                <p>Usuario:</p>
+                <input type="text" class="field" id="in_usuario"> <br/>
+        
+                <p>Contraseña:</p>
+                <input type="text" class="field" id="in_contrasena"> <br/>
+     
+                <p>Correo electrónico:</p>
+                <input type="text" class="field"> <br/>
+        
+                <p>Telefono:</p>
+                <input type="text" class="field"> <br/>
+        
+    
+                <p class="center-content">
+                    <button type="submit" class="btn"> Enviar</button>
+                </p>
             </form>
         </div>
+        
     </body>
 </html>
