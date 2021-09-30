@@ -7,61 +7,180 @@ and open the template in the editor.
     Created on : 17/09/2021, 3:33:45 p. m.
     Author     : GABRIEL
 */
+:root{
+    --width: 300px;
+    --pading: 10px;
+    --bgcolor: rgb(52,52,52);
+    --hovercolor: rgb(23,23,23);
+    --widht-colapsed: 50px;
+}
+body{
+    background-color: grey;
+    padding: 0;
+    margin: 0;
+}
 
+.body_expanded{
+    margin-left: calc(var(--width) - var(--widht-colapsed) - 70px);
+}
+
+#landing_navbar{
+    background-color: var(--bgcolor);
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/*
+    Encabezado boton menu
+*/
+
+#landing_navbar #Encabezado-menu{
+    box-sizing: border-box;
+}
+
+#landing_navbar #Encabezado-menu #titulo_contactenos{
+    box-sizing: border-box;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+#landing_navbar #Encabezado-menu #menu-btn{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: var(--pading);
+    box-sizing: border-box;
+}
+#landing_navbar #Encabezado-menu #menu-btn:hover{
+    background-color: var(--hovercolor)
+}
+#landing_navbar #Encabezado-menu .btn-hamburguer{
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+/*
+    Logo menu contactenos
+*/
+#landing_navbar #logo_menu{
+    padding: var(--pading);
+    text-align: center;
+}
+#navbar_logo{
+    padding: var(--pading) 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*
+    Items
+*/
+
+#items_navbar{
+    overflow: hidden;
+    text-align: center;
+}
+/*
+    menu desplegado
+*/
+.menu-extended{
+    width: var(--width);
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-extended #Encabezado-menu #titulo_contactenos{
+    /*display: inline-block;
+    width: 250px;
+    margin-right: -5px;
+    padding: var(--pading);*/
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.menu-extended #Encabezado-menu #titulo_contactenos span{
+    width: calc(var(--width)- var(--widht-colapsed)-5px);
+    overflow: hidden;
+    display: inline-block;
+}
+.menu-extended #Encabezado-menu #menu-btn{
+    margin-left: 250px;
+    width: var(--widht-colapsed);
+}
+/*
+    menu colapsado o plegado
+*/
+.menu-colapsed{
+    width: calc(var(--widht-colapsed)+120px);
+    height: 6.2%;
+}
+
+.menu-colapsed #Encabezado-menu #titulo_contactenos {
+    display: inline-block;
+    width: 250px;
+    margin-right: -5px;
+    padding: 4px
+}
+.menu-colapsed #Encabezado-menu #menu-btn .btn-hamburguer{
+    width: 0%;
+    height: 0px;
+    margin: 0;
+}
+.menu-colapsed #Encabezado-menu #menu-btn{
+    width: 120px;
+}
+.menu-colapsed #logo_menu{
+    display: none;
+}
+.menu-colapsed #items_navbar{
+    display: none;
+}
 .container {
         display: grid;
         grid-template-columns: 0.4fr 1.3fr 1.3fr;
-        grid-template-rows: 0.3fr 1.3fr 1.3fr 0.5fr;
+        grid-template-rows: 0.5fr 1.3fr 1.3fr 0.5fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "landing_navbar Header Header"
-          "landing_navbar section section"
-          "landing_navbar section section"
+          "Header Header Header"
+          "section section section"
+          "section section section"
           "footer footer footer";
       }
 
       .Header { grid-area: Header; 
+                margin-left: 120px;
+                height: 47px;
+                color: white;
+                background-color: var(--bgcolor);
                 
-                background-color: #F7A516;
       }
 
       .section { grid-area: section; 
                  
       }
 
-      .landing_navbar { 
-          display: grid; 
-            grid-template-columns: 1fr; 
-            grid-template-rows: 1fr 1fr; 
-            gap: 0px 0px; 
-            grid-template-areas: 
-            "nav_01"
-            "Nav_02"; 
-            grid-area: landing_navbar; 
-            background-color: #0053AB;
-            text-align: center;
-            
-                        
-     }
      
-      .nav_01 { grid-area: nav_01; 
-                
-      }
-      .Nav_02 { grid-area: Nav_02; 
-                
-      }
-      
-      
       .footer { grid-area: footer; 
                 
                 background-color: #0053AB;
       }
       .wrapper {
-          height:20px; 
-        width:100px; 
-        margin: -20px -50px; 
+        height:70px; 
+        width:150px; 
         position:relative;
-        top:40%; 
+        top:60%; 
         left:0%;
+        color: white;
+        font-size: 20px;
+        background-color: var(--bgcolor)
       }
+      
+.body_expanded .container .footer, .body_expanded .container .section{
+    margin-left: 120px;
+}

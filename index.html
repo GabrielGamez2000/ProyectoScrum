@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Sprint 1</title>
+        <title>Inicio - ConsultingDev</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilos.css">
@@ -15,22 +15,37 @@ and open the template in the editor.
     </head>
     
     <body>
+        <nav class="menu-colapsed" id="landing_navbar">
+            <!-- HEADER -->
+            <!-- Boton para desplegar menu contacetenos -->
+            <div id="Encabezado-menu">
+                <!--<div id="titulo_contactenos"><span>contactenos</span></div>-->
+                <div id="menu-btn">
+                    <div class="btn-hamburguer"></div>
+                    <div class="btn-hamburguer"></div>
+                    <div class="btn-hamburguer"></div>
+                    <div id="titulo_contactenos"><span>Contáctanos</span></div>
+                </div>
+            </div>
+            <!-- Logo que aparece dentro de navbar -->
+            <div id="logo_menu">
+                <img id="navbar_logo" src="imagenes/logo incio.png" height="127" width="250">
+            </div> 
+            <!-- Boton para ir a formulario -->
+            <div id="items_navbar">
+                <a id="link_registro" href="registro.html" target="_self">
+                    <button id="btn_irRegistro" class="wrapper" >
+                    Registro
+                    </button>
+                </a>
+            </div>
+        </nav>
+        
         <div class="container">
             <header class="Header">
                encabezado
             </header>
-            <nav class="landing_navbar" id="landing_navbar">
             
-                    <img id="navbar_logo" src="imagenes/logo incio.png" height="127" width="250">
-            
-            
-                    <a id="link_registro" href="registro.html" target="_self">
-                        <button id="btn_irRegistro" class="wrapper" >
-                        Registro
-                        </button>
-                    </a>
-            
-            </nav>
             <section class="section">
                 contenido
             </section>
@@ -38,5 +53,17 @@ and open the template in the editor.
                 piepagina
             </footer>
         </div>
+        
+        <!-- Script para abrir barra navegación -->
+        <script>
+            const btn = document.querySelector('#menu-btn');
+            const menu = document.querySelector('#landing_navbar');
+            btn.addEventListener('click', e => {
+                menu.classList.toggle("menu-extended");
+                menu.classList.toggle("menu-colapsed");
+                
+                document.querySelector('body').classList.toggle('body_expanded');
+            });
+        </script>
     </body>
 </html>
