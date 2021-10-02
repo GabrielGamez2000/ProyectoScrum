@@ -7,17 +7,21 @@ and open the template in the editor.
     Created on : 17/09/2021, 3:33:45 p. m.
     Author     : GABRIEL
 */
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
 :root{
     --width: 300px;
     --pading: 10px;
-    --bgcolor: rgb(52,52,52);
-    --hovercolor: rgb(23,23,23);
+    --bgcolor: rgb(32, 163, 215);
+    --hovercolor: rgb(21, 100, 139);
     --widht-colapsed: 50px;
 }
 body{
-    background-color: grey;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .body_expanded{
@@ -27,7 +31,6 @@ body{
 #landing_navbar{
     background-color: var(--bgcolor);
     color: white;
-    position: fixed;
     left: 0;
     top: 0;
 }
@@ -84,20 +87,27 @@ body{
     overflow: hidden;
     text-align: center;
 }
+.wrapper {
+    height:70px; 
+    width:150px; 
+    position:relative;
+    top:60%; 
+    left:0%;
+    color: white;
+    font-size: 20px;
+    background-color: var(--bgcolor)
+}
 /*
     menu desplegado
 */
 .menu-extended{
     width: var(--width);
     height: 100%;
+    position: fixed;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .menu-extended #Encabezado-menu #titulo_contactenos{
-    /*display: inline-block;
-    width: 250px;
-    margin-right: -5px;
-    padding: var(--pading);*/
     width: 0;
     height: 0;
     padding: 0;
@@ -117,9 +127,12 @@ body{
 */
 .menu-colapsed{
     width: calc(var(--widht-colapsed)+120px);
-    height: 6.2%;
+    height: 17.2%;
+    position: absolute;
 }
-
+.menu-colapsed #Encabezado-menu{
+    padding-top: 40px;
+}
 .menu-colapsed #Encabezado-menu #titulo_contactenos {
     display: inline-block;
     width: 250px;
@@ -140,10 +153,19 @@ body{
 .menu-colapsed #items_navbar{
     display: none;
 }
+
+.body_expanded .container .footer, .body_expanded .container .section{
+    margin-left: 120px;
+}
+
+/* Container*/
+
+
+
 .container {
         display: grid;
         grid-template-columns: 0.4fr 1.3fr 1.3fr;
-        grid-template-rows: 0.5fr 1.3fr 1.3fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -151,36 +173,59 @@ body{
           "section section section"
           "section section section"
           "footer footer footer";
-      }
+    }
 
       .Header { grid-area: Header; 
                 margin-left: 120px;
-                height: 47px;
+                height: 130px;
                 color: white;
-                background-color: var(--bgcolor);
-                
-      }
-
+                background-color: var(--bgcolor);                
+    }
+      header a img {
+                transition: background-color, box-shadow 0.4s ease;
+                float: right;
+                height: 45px;
+                margin: 2.5rem 0.5rem;
+    }
+      header a img:hover {
+                box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+                background-color: rgb(21, 100, 139);
+    }
+      #navbar_logoHeader {
+                height: 127px;
+                width: 250px
+    }
       .section { grid-area: section; 
-                 
-      }
+                height: 1200px;
+                min-height: 100%;
+                text-align: justify;
+                padding: 0.6rem;
+    }
 
      
       .footer { grid-area: footer; 
-                
-                background-color: #0053AB;
-      }
-      .wrapper {
-        height:70px; 
-        width:150px; 
-        position:relative;
-        top:60%; 
-        left:0%;
-        color: white;
-        font-size: 20px;
-        background-color: var(--bgcolor)
-      }
+                background-color: var(--bgcolor);
+                padding: 3rem;
+                color: white;
+                position: relative;
+    }
+      footer section {
+                float: right;
+    }
+
+      footer p {
+                margin: 0;
+    }
+
+      footer a {
+                transition: color 0.3s ease;
+                color: white;
+                text-decoration: none;
+                margin: 0 0.3rem;
+    }
+
+      footer a:hover {
+                color: var(--hovercolor);
+    }
+
       
-.body_expanded .container .footer, .body_expanded .container .section{
-    margin-left: 120px;
-}
