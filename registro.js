@@ -10,21 +10,21 @@ function agregarRegistro(){
     var usuario = document.getElementById('in_usuario').value;
     var contrasena = document.getElementById('in_contrasena').value;
     
-    registros.push(usuario);
-    registros.push(contrasena);
+    var informacionUsuario = {usuario,contrasena};
+    registros.push(informacionUsuario);
     console.log(registros);
-    alert(registros);
+    /*alert(registros);*/
 }
 
 function filtrarPorContrasena(arreglo, filtro){
     RegistrosConstraseñas =[];
     for (let i=0; i<arreglo.length; i++){
-        if(arreglo[i].length <= filtro){
+        if(arreglo[i].contrasena.length <= filtro){
             RegistrosConstraseñas.push(arreglo[i]);
         }else{
         }
     }
-    /*console.log(RegistrosConstraseñas);*/
+    console.log(RegistrosConstraseñas);
     return RegistrosConstraseñas;
 }
 

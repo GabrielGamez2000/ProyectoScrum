@@ -127,7 +127,7 @@ body{
 */
 .menu-colapsed{
     width: calc(var(--widht-colapsed)+120px);
-    height: 17.2%;
+    height: 130px;
     position: absolute;
 }
 .menu-colapsed #Encabezado-menu{
@@ -184,8 +184,8 @@ body{
       header a img {
                 transition: background-color, box-shadow 0.4s ease;
                 float: right;
-                height: 45px;
-                margin: 2.5rem 0.5rem;
+                height: 30px;
+                margin: 0.5rem 0.5rem;
     }
       header a img:hover {
                 box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
@@ -193,10 +193,12 @@ body{
     }
       #navbar_logoHeader {
                 height: 127px;
-                width: 250px
+                width: 250px;
+                margin-left: 50%;
+                transform: translateX(-50%);
     }
       .section { grid-area: section; 
-                height: 1200px;
+                height: 100%;
                 min-height: 100%;
                 text-align: justify;
                 padding: 0.6rem;
@@ -207,6 +209,7 @@ body{
                 background-color: var(--bgcolor);
                 padding: 3rem;
                 color: white;
+                height: 50%;
                 position: relative;
     }
       footer section {
