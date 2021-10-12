@@ -49,3 +49,11 @@ input, textarea{
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
+/* Estilos para el inicio de sesión */
+
+.titulo{
+    margin-left: 30%;
+    color:rgb(19, 80, 4);
+    
+}
